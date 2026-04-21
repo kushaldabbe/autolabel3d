@@ -1,0 +1,23 @@
+# Dashcam video configuration
+name: "dashcam"
+video_path: "${oc.env:DASHCAM_VIDEO_PATH,data/dashcam/video.mp4}"
+
+# Frame sampling
+sampling:
+  strategy: "every_n"
+  every_n: 5          # extract every 5th frame
+  max_frames: 500
+
+# Classes of interest
+classes:
+  - "car"
+  - "pedestrian"
+  - "cyclist"
+  - "traffic_cone"
+
+# Camera calibration (must be provided for accurate 3D lifting)
+calibration:
+  fx: 1000.0  # focal length x (pixels)
+  fy: 1000.0  # focal length y (pixels)
+  cx: 960.0   # principal point x
+  cy: 540.0   # principal point y

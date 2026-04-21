@@ -1,0 +1,22 @@
+# Boxer geometry-only 2D→3D lifting configuration
+# No depth network required — uses camera model + class size priors
+name: "boxer"
+
+fitting:
+  use_ground_plane: true
+  camera_height: 1.65       # camera height above ground plane (meters)
+  height_prior:
+    car: 1.5
+    pedestrian: 1.7
+    cyclist: 1.7
+    traffic_cone: 0.8
+  width_prior:
+    car: 1.8
+    pedestrian: 0.6
+    cyclist: 0.6
+    traffic_cone: 0.3
+  length_prior:
+    car: 4.5
+    pedestrian: 0.6
+    cyclist: 1.8
+    traffic_cone: 0.3

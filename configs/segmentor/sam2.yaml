@@ -1,0 +1,12 @@
+# SAM 2.1 video segmentation configuration
+name: "sam2"
+model_size: "base_plus"  # tiny | small | base_plus | large
+
+# Video predictor settings
+propagation:
+  max_frames_per_clip: 100     # process video in clips of this many frames
+  overlap_frames: 10            # overlap between consecutive clips for continuity
+  min_mask_area: 100            # discard masks smaller than this (pixels²)
+
+# Prompting strategy
+prompt_type: "box"  # box | point | both

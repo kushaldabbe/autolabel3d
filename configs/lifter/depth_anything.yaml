@@ -1,0 +1,13 @@
+# Depth Anything V2 monocular depth + geometric lifting configuration
+name: "depth_anything"
+model_size: "base"  # small | base | large
+
+# 3D bounding box fitting from depth point cloud
+fitting:
+  method: "pca"          # pca | min_enclosing
+  min_points: 50         # minimum point cloud points per object to attempt lifting
+  height_prior:          # per-class height priors (meters) for scale recovery
+    car: 1.5
+    pedestrian: 1.7
+    cyclist: 1.7
+    traffic_cone: 0.8

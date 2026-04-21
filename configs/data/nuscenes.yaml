@@ -1,0 +1,22 @@
+# nuScenes dataset configuration
+name: "nuscenes"
+version: "v1.0-mini"  # v1.0-mini | v1.0-trainval | v1.0-test
+dataroot: "${oc.env:NUSCENES_DATAROOT,data/nuscenes}"
+split: "mini_val"
+
+# Frame sampling
+sampling:
+  strategy: "keyframe"  # keyframe | every_n | all
+  every_n: 1            # used when strategy=every_n
+  max_frames: null       # null = no limit
+
+# Classes of interest (maps to nuScenes categories)
+classes:
+  - "car"
+  - "pedestrian"
+  - "cyclist"
+  - "traffic_cone"
+
+# Camera selection
+cameras:
+  - "CAM_FRONT"

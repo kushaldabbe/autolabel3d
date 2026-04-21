@@ -1,0 +1,17 @@
+# Grounding DINO open-vocabulary detector configuration
+name: "grounding_dino"
+model_id: "IDEA-Research/grounding-dino-base"  # HuggingFace model ID (auto-downloads ~700MB)
+weights_path: null  # not needed for HF-hosted models
+
+# Detection thresholds
+box_threshold: 0.3    # minimum objectness score for a detection
+text_threshold: 0.25  # minimum text-alignment score per class phrase
+
+# Text prompt override (auto-generated from data.classes if null)
+# Format: "car . pedestrian . cyclist . traffic cone ."
+text_prompt: null
+
+# Non-Maximum Suppression (per-class)
+nms:
+  enabled: true
+  iou_threshold: 0.5

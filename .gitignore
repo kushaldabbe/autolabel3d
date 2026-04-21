@@ -1,0 +1,88 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# C extensions
+*.so
+
+# Distribution / packaging
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Virtual environments
+.venv/
+venv/
+ENV/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# Environment variables
+.env
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# mypy
+.mypy_cache/
+.dmypy.json
+dmypy.json
+
+# ruff
+.ruff_cache/
+
+# pytest
+.pytest_cache/
+htmlcov/
+.coverage
+.coverage.*
+coverage.xml
+
+# ONNX / TensorRT artifacts
+*.onnx
+*.engine
+*.plan
+
+# Model weights (download separately)
+weights/
+checkpoints/
+*.pth
+*.pt
+*.bin
+*.safetensors
+
+# Data (download separately)
+/data/
+!data/.gitkeep
+
+# Pipeline outputs (generated)
+/outputs/
+
+# wandb
+wandb/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+logs/
