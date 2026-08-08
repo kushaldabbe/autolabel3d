@@ -91,6 +91,8 @@ brew install ffmpeg   # macOS
 
 ## Quick Start
 
+> **Data note:** sample inputs are not committed (gitignored — see `data/`). Provide your own dashcam video (e.g. an MP4 of road driving) or a nuScenes scene, and point `--input` at it. The nuScenes loader reads from `NUSCENES_DATAROOT` (see `.env.example`).
+
 ### Dashcam video
 
 ```bash
